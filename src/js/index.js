@@ -1,3 +1,3 @@
 import "./about.js";
 import "./faq.js";
-import "../styles/styles.css";
+import "../styles/styles.scss";

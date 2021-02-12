@@ -3,7 +3,7 @@ const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
     entry: "./src/js/index.js",
-    mode: "production",
+    mode: "development",
     devServer: {
         contentBase: path.join(__dirname, "dist/"),
         staticOptions: { index: "about.html" },
@@ -12,8 +12,8 @@ module.exports = {
         rules: [
             { test: /\.svg$/, use: "svg-inline-loader" },
             {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"],
+                test: /\.s[ac]ss$/i,
+                use: ["style-loader", "css-loader", "sass-loader"],
             },
         ],
     },
